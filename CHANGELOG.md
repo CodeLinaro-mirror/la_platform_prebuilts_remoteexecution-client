@@ -1,3 +1,28 @@
+## Release 0.6.2 (2019-12-19)
+```
+Changes:
+  + 41c7b59:
+    Update remote-apis-sdks commit to include the GRPC fix in SDK
+  + bd18b14:
+    Prevent failure to load clang-scan-deps from failing actions.
+```
+
+This release primarily fixes the GRPC max concurrent streams issue in the SDK
+and goes back to using full input processor as default.
+
+## Release 0.6.1 (2019-12-16)
+```
+Changes:
+  + d3de0ae:
+    Make shallow input processing the default.
+  + 8ded0c8:
+    Fix for flakiness in logger that potentially caused b/146229435.
+  + 25dab52:
+    Add clang-scan-deps to LERC.
+  + 8e55b12:
+    Add verification mode to runRemote.
+```
+
 ## Release 0.6.0 (2019-12-03)
 ```
 Changes:
