@@ -1,3 +1,190 @@
+## Release 0.25.0 (2021-03-23)
+```
+Changes:
+ + 65ad975:
+ Revert Go version back to 1.15
+ + 5ac5cd7:
+ Add remote and local status to the ActionLatency metric.
+ + 59fe2c7:
+ remove cmake, ninja for linux and macosx
+ + 2800e67:
+ chromium integ tests update to r863615 (VERSION 4450.0 to 4455.0)
+ + 634cd9a:
+ Print newline at the end of bandwidth stats
+ + 3174046:
+ [rules_go] Update rules go to v0.27.0
+ + 8fe2853:
+ [windows] Faster releases.
+ + 92f2ee2:
+ Better report bandwidth stats
+ + 7e1a6e7:
+ Bump gazelle to 0.23.0
+ + e0165b9:
+ [MacOS] Add remote cache to macos builds.
+ + f178d72:
+ Make build latency distribution metric buckets more granular.
+ + 291b4fb:
+ chromium integ tests update to r863615
+ + c92a239:
+ [llvm] Update LLVM version.
+ + 30b4b42:
+ [windows] Delete presubmit and continuous artifacts.
+ + e740f8d:
+ [windows] Better CI unzipping.
+ + 9ac190d:
+ Add an option to bootstrap to print bandwidth stats
+ + 9966321:
+ [Part 1] Automate staging release symlink creation for Android
+```
+
+## Release 0.24.0 (2021-03-16)
+```
+Changes:
+ + 6efeeb8:
+ [Windows] CI Remove setup.bat
+ + 6f3283c:
+ Change BuildFailureCount to BuildCount.
+ + f64b773:
+ [windows] Refactor integ tests structure.
+ + edc831f:
+ roll protobuf to 3.15.6
+ + ea1e847:
+ [integ] Add local tag to integration tests.
+ + 3cd330e:
+ [ci] Add remote config to converage tests.
+ + 2f663d1:
+ rpl2trace: ignore event if from/to is unset
+ + 1c8b806:
+ [kokoro] Use RBE on windows.
+ + 9941d4f:
+ Turn on strict action environment for Windows.
+ + f40c97b:
+ [bazel] Strict environments.
+ + 21f3e0a:
+ use go 1.16.2
+ + b07259f:
+ Rename left / right in compare to remote/local
+ + da593bd:
+ Run compare action on remote n times
+ + 6dc3b1e:
+ [toolchains] Add manual tags to prevent wrong OS attempt to compile
+ + 5118588:
+ Add script to automatically create rollback CLs to qt-dev
+ + 4a1d133:
+ Upgrade bazel version to 4.0.0
+ + a5cb19f:
+ [clang-scan-deps] Use bazel to compile clang.
+ + 87dad6f:
+ Bump rules go to 0.26.0
+ + 8c6798a:
+ Update remote-apis-sdks
+ + b6ed9f7:
+ clean up chromium basic compile test
+ + 4084f98:
+ Refactor and rearrange compare functions
+ + 49c9b72:
+ [windows] Add windows remote execution configs.
+```
+
+## Release 0.23.0 (2021-03-09)
+```
+Changes:
+ + 0c607b4:
+ Reenable error/warning/fatal logs in rewrapper
+ + abb4e7a:
+ roll protobuf to 3.15.5
+ + ab08f5d:
+ update chromium/linux integ tests
+ + c92fef0:
+ add compile error test case
+ + 397da33:
+ [windows] Add rules_go patch.
+ + 6d584d6:
+ Add BuildFailureCount metric to track number of reclient related failures.
+ + 4654596:
+ [windows] Add windows re-client builder Dockerfile
+ + 87fbfcf:
+ Bump up continuous android test timeout to 2 hours
+ + ad12832:
+ update chromium/windows integ tests
+ + 88a814d:
+ roll llvm to 6d52c4819294dafb2c072011d72bb523092248a2
+ + 3d6a480:
+ Support arbitrary labels for metrics.
+ + 09078f1:
+ Update integration tests to use aosp image
+ + 5140ecf:
+ Add scripts to clone and create an image for AOSP source
+ + d3d607e:
+ roll protobuf to 3.15.3
+```
+
+## Release 0.22.0 (2021-02-25)
+```
+Changes:
+ + e00c829:
+ [windows] Add RELEASE & NOTICE to windows kokoro release workflow.
+ + 3f8f177:
+ roll protobuf to 3.15.2
+ + cdd4f79:
+ Update llvm to 98c6110d9bdda166a6093f8fdf1320b5f477ecbe
+ + 4f04dcd:
+ Remove deprecated rbe_autoconfig.
+ + 7d441d4:
+ [experiments] Only cleanup experiment resources on success.
+ + b6c7a0b:
+ Prevent NOTICE file from causing conflicts when dropped into Android.
+ + 0e8f5d3:
+ Remove path and home variables
+ + f7e32a2:
+ roll protobuf to 3.15.1
+ + 873c11f:
+ Upgrade to new SDK version.
+ + 33983cf:
+ use go 1.16
+ + 06d3401:
+ Implement idle timeout in reproxy
+ + 1a5f414:
+ Add metrics_namespace flag to bootstrap
+ + 04acc59:
+ Add LICENSE and NOTICE files to kokoro release artifacts.
+```
+
+## Release 0.21.0 (2021-02-18)
+```
+Changes:
+ + 2da7139:
+ Add reducedtext log format to write abridged rpl log files.
+ + b2fbbe6:
+ Add reclient version label to all exported metrics.
+ + 857f777:
+ Add remote status label to exported metrics. Use GenericNode for reduced cardinality.
+ + 4a455f7:
+ Roll bazel-gazelle to 0.22.3
+ + ac3ad59:
+ [experiments] Cleanup outputs between trials
+ + 6bd89dd:
+ Pass re-client tool name and version to GWS logs
+ + ee8c7bb:
+ Add NaCl --target flags on dependency scanning & extract input nacl procesor.
+ + 0f8c514:
+ Fix experiments multi-run setup.
+ + ded13c8:
+ Add LICENSE and NOTICE files to the reclient repo.
+ + afad219:
+ Update compression test proto
+ + b1b5cef:
+ roll rules_foreign_cc to 78dd4749941c0031e107cccbc441c7eeb89accd0
+ + 1b6a45d:
+ Use mutex before updating map
+ + cd7f9f4:
+ Cleanup obsolete disk deletion code
+ + 14a4efc:
+ [experiments] Move the image disk creation to the source image creation.
+ + bb8a304:
+ Update RE SDK & Add logging for download metrics
+```
+
 ## Release 0.20.1 (2021-02-09)
 ```
 Changes:
@@ -37,6 +224,7 @@ Changes:
 ```
 
 ## Release 0.19.3 (2021-01-27)
+
 ```
 Changes:
  + cce3f38:
@@ -52,6 +240,7 @@ Changes:
 ```
 
 ## Release 0.19.2 (2021-01-20)
+
 ```
 Changes:
  + b908e73:
@@ -63,6 +252,7 @@ Changes:
 ```
 
 ## Release 0.19.1 (2021-01-18)
+
 ```
 Changes:
  + 91f67f1:
@@ -96,6 +286,7 @@ Changes:
 ```
 
 ## Release 0.19.0 (2021-01-05)
+
 ```
 Changes:
  + dca0beb:
@@ -113,6 +304,7 @@ Changes:
 ```
 
 ## Release 0.18.0 (2020-12-03)
+
 ```
 Changes:
  + af4481d:
@@ -134,6 +326,7 @@ Changes:
 ```
 
 ## Release 0.17.0 (2020-11-30)
+
 ```
 Changes:
  + ebb42e2:
@@ -167,6 +360,7 @@ Changes:
 ```
 
 ## Release 0.16.1 (2020-11-18)
+
 ```
 Changes:
  + 28a5cef:
@@ -174,6 +368,7 @@ Changes:
 ```
 
 ## Release 0.16.0 (2020-11-17)
+
 ```
 Changes:
  + b4adeb9:
@@ -217,6 +412,7 @@ Changes:
 ```
 
 ## Release 0.15.0 (2020-10-27)
+
 ```
 Changes:
  + 296553b:
@@ -252,6 +448,7 @@ Changes:
 ```
 
 ## Release 0.14.5 (2020-10-16)
+
 ```
 Changes:
  + 8bfe4dd:
@@ -273,6 +470,7 @@ Changes:
 ```
 
 ## Release 0.14.4 (2020-10-09)
+
 ```
 Changes:
  + 720d85a:
@@ -292,6 +490,7 @@ Changes:
 ```
 
 ## Release 0.14.3 (2020-10-06)
+
 ```
 Changes:
  + ff8215b:
@@ -301,6 +500,7 @@ Changes:
 ```
 
 ## Release 0.14.2 (2020-10-01)
+
 ```
 Changes:
  + d70e820:
@@ -310,6 +510,7 @@ Changes:
 ```
 
 ## Release 0.14.1 (2020-09-30)
+
 ```
 Changes:
  + a5f1897:
@@ -347,6 +548,7 @@ Changes:
 ```
 
 ## Release 0.14.0 (2020-09-11)
+
 ```
 Changes:
  + d91fa91:
@@ -414,6 +616,7 @@ Changes:
 ```
 
 ## Release 0.13.7 (2020-08-21)
+
 ```
 Changes:
  + 0d25d98:
@@ -495,6 +698,7 @@ Changes:
 ```
 
 ## Release 0.13.5 (2020-07-23)
+
 ```
 Changes:
  + 16831e5:
@@ -544,6 +748,7 @@ Changes:
 ```
 
 ## Release 0.13.4 (2020-06-30)
+
 ```
 Changes:
  + 3af712d:
@@ -573,6 +778,7 @@ Changes:
 ```
 
 ## Release 0.13.3 (2020-06-25)
+
 ```
 Changes:
  + e0ce5e9:
@@ -622,6 +828,7 @@ Changes:
 ```
 
 ## Release 0.13.2 (2020-06-08)
+
 ```
 Changes:
  + 8d702db:
@@ -657,14 +864,17 @@ Changes:
 ```
 
 ## Release 0.13.1 (2020-05-27)
+
 ```
 Changes:
   + 6ef0853:
     Revert "fix .bazelrc for windows"
 ```
+
 This release fixes the re-client version number to re-include git commit sha.
 
 ## Release 0.13.0 (2020-05-27)
+
 ```
 Changes:
   + ac536bf:
@@ -794,14 +1004,14 @@ Changes:
   + 5b837e8:
     Include rsp file(s) as explicit inputs if passed explicitly to rewrapper.
 ```
-This release includes a number of fixes to:
-1. Get re-client to build in Windows
-2. Fix R8 mismatches
-3. Change re-client builds to use Bazelisk
-4. Fixes for C++ link action mismatches
-5. Fixes to flag parser / input processor for metalava actions
+
+This release includes a number of fixes to: 1. Get re-client to build in Windows
+2. Fix R8 mismatches 3. Change re-client builds to use Bazelisk 4. Fixes for C++
+link action mismatches 5. Fixes to flag parser / input processor for metalava
+actions
 
 ## Release 0.12.2 (2020-04-15)
+
 ```
 Changes:
   + d52f0b7:
@@ -818,6 +1028,7 @@ This release primarily contains bug fixes to C++ input processor and rsp file
 parsing.
 
 ## Release 0.12.1 (2020-04-10)
+
 ```
 Changes:
   + 09a5526:
@@ -827,6 +1038,7 @@ Changes:
 This release fixes input processor latency for header-abi-dumper actions.
 
 ## Release 0.12.0 (2020-04-08)
+
 ```
 Changes:
   + 5b29aa6:
@@ -841,10 +1053,11 @@ Changes:
     Add support for Bazelisk and pin to Bazel 2.2.0.
 ```
 
-This release adds support for remote execution of header ABI dumper and adds a fix
-for compare mode of metalava actions.
+This release adds support for remote execution of header ABI dumper and adds a
+fix for compare mode of metalava actions.
 
 ## Release 0.11.0 (2020-04-02)
+
 ```
 Changes:
   + b2836e1:
@@ -863,6 +1076,7 @@ This release adds support for linking, explicit output directories, and multiple
 input file lists. Also includes logging fixes.
 
 ## Release 0.10.0 (2020-04-01)
+
 ```
 Changes:
   + 3be02a4:
@@ -892,6 +1106,7 @@ Changes:
 This release mainly adds metalava support to reproxy.
 
 ## Release 0.9.5 (2020-03-16)
+
 ```
 Changes:
   + 0bd4e59:
@@ -906,6 +1121,7 @@ This release makes reproxy support cache silo key and does not clean arguments
 for remote execution to prevent bootloops on output images.
 
 ## Release 0.9.4 (2020-03-05)
+
 ```
 Changes:
   + 250a753:
@@ -918,6 +1134,7 @@ This release has fixes for downloading coverage file generated as part of clang
 compiles and fixes LERC to NOT do un-necessary dependency validation.
 
 ## Release 0.9.3 (2020-03-03)
+
 ```
 Changes:
   + 9d89a75:
@@ -936,6 +1153,7 @@ This release has fixes with respect to C++ input processor and bumps RE-SDK
 version to include fix for batch blob downloads.
 
 ## Release 0.9.2 (2020-02-28)
+
 ```
 Changes:
   + e140d51:
@@ -954,6 +1172,7 @@ This release fixes a bug in reading RBE flags and includes input processor
 refactorings and fixes for supporting the nest/chrome builds.
 
 ## Release 0.9.1 (2020-02-25)
+
 ```
 Changes:
   + f4fae4d:
@@ -962,10 +1181,11 @@ Changes:
     Remove the invalidation check in dependency scanner plugin
 ```
 
-This release changes scan-deps interface so that it takes an unescaped
-list of arguments instead of a JSON database string.
+This release changes scan-deps interface so that it takes an unescaped list of
+arguments instead of a JSON database string.
 
 ## Release 0.9.0 (2020-02-21)
+
 ```
 Changes:
   + 9bdf5ca:
@@ -993,6 +1213,7 @@ Changes:
 This release contains support for the toolchain_inputs flag and other fixes.
 
 ## Release 0.8.2 (2020-02-10)
+
 ```
 Changes:
   + cc4b9cf:
@@ -1003,6 +1224,7 @@ This release fixes missing error logs in removal of output directories in
 compare mode.
 
 ## Release 0.8.1 (2020-02-07)
+
 ```
 Changes:
   + 2ae2a7f:
@@ -1025,10 +1247,11 @@ Changes:
     Add a feature to enable/disable the command argument cleaning. Default is enabled.
 ```
 
-This release fixes a breakage in D8 compare builds due to having inputs under output
-directories.
+This release fixes a breakage in D8 compare builds due to having inputs under
+output directories.
 
 ## Release 0.8.0 (2020-02-03)
+
 ```
 Changes:
   + 7af0844
@@ -1052,10 +1275,11 @@ Changes:
     Add -Qunused-arguments parameter to scan-deps invocation to suppress warnings
 ```
 
-This release adds a feature to enable synchronous upload of cached results in LERC mode
-and has a couple of bug-fixes for remote-execution flow.
+This release adds a feature to enable synchronous upload of cached results in
+LERC mode and has a couple of bug-fixes for remote-execution flow.
 
 ## Release 0.7.2 (2020-01-23)
+
 ```
 Changes:
   + edfbaae:
@@ -1068,6 +1292,7 @@ This release reverts the clang-scan-deps optimization since we discovered a bug
 in clang-scan-deps caching behaviour when workers are reused.
 
 ## Release 0.7.1 (2020-01-20)
+
 ```
 Changes:
   + bfee822:
@@ -1100,10 +1325,11 @@ Changes:
     Add virtual inputs for all -I and -isystem dir paths
 ```
 
-This release includes a potential fix for the flaky resource exhaustion issue
-as well as an optimization for the clang-scan-deps plugin.
+This release includes a potential fix for the flaky resource exhaustion issue as
+well as an optimization for the clang-scan-deps plugin.
 
 ## Release 0.7.0 (2020-01-06)
+
 ```
 Changes:
   + ea1b2a1:
@@ -1117,6 +1343,7 @@ lives alongside LLVM toolchains in Android to specify the list of files that
 constitute toolchain inputs.
 
 ## Release 0.6.2 (2019-12-19)
+
 ```
 Changes:
   + 41c7b59:
@@ -1129,6 +1356,7 @@ This release primarily fixes the GRPC max concurrent streams issue in the SDK
 and goes back to using full input processor as default.
 
 ## Release 0.6.1 (2019-12-16)
+
 ```
 Changes:
   + d3de0ae:
@@ -1142,6 +1370,7 @@ Changes:
 ```
 
 ## Release 0.6.0 (2019-12-03)
+
 ```
 Changes:
 
@@ -1199,6 +1428,7 @@ This release adds local performance metrics and shadow header detection as an
 off by default feature.
 
 ## Release 0.5.3 (2019-11-13)
+
 ```
 Changes:
 
@@ -1210,6 +1440,7 @@ Changes:
 This release addresses libstdc++ loading issue on dependency scanner plugin.
 
 ## Release 0.5.2 (2019-11-13)
+
 ```
 Changes:
 
@@ -1220,10 +1451,11 @@ Changes:
     with version number stamping.
 ```
 
-This release makes reproxy not fail when it cannot load CPP dependency
-scanner plugin.
+This release makes reproxy not fail when it cannot load CPP dependency scanner
+plugin.
 
 ## Release 0.5.1 (2019-11-11)
+
 ```
 Changes:
 
@@ -1231,10 +1463,10 @@ Changes:
     Add dependency_scanner_go_plugin.so to Kokoro regex too
 ```
 
-This release makes the Kokoro workflow also upload dependency scanner
-plugin.
+This release makes the Kokoro workflow also upload dependency scanner plugin.
 
 ## Release 0.5.0 (2019-11-11)
+
 ```
 Changes:
 
@@ -1255,6 +1487,7 @@ This release mainly adds dependency scanner plugin to support remote execution
 for C++ compile actions.
 
 ## Release 0.3.0 (2019-10-22)
+
 ```
 Changes:
 
